@@ -174,11 +174,18 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
-          <p className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <span>
+              Built by{" "}
+              <span className="text-sand/90 font-medium tracking-wide text-coral-ember">
+                kerydex
+              </span>
+            </span>
+            <span>·</span>
             <span>Price Range: {siteConfig.priceRange}</span>
             <span>·</span>
             <span>Weligama Bay, Matara</span>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
-import { Menu, X, Phone, MapPin, Clock } from "lucide-react";
+import { Menu, X, MapPin, Clock } from "lucide-react";
 import { Button } from "./Button";
 import { siteConfig } from "@/lib/site";
 
@@ -113,15 +113,6 @@ export function Navbar({ isStatic = false }: { isStatic?: boolean }) {
 
           {/* Action CTAs */}
           <div className="hidden sm:flex items-center gap-4">
-            <a
-              href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
-              className="hidden xl:inline-flex items-center gap-1.5 text-xs text-sand/70 hover:text-turmeric transition-colors font-sans tracking-wider"
-              aria-label="Call restaurant directly"
-            >
-              <Phone className="w-3.5 h-3.5 text-coral-ember" />
-              <span>{siteConfig.contact.phone}</span>
-            </a>
-
             <Button
               href="/#visit"
               variant="coral"
@@ -199,15 +190,7 @@ export function Navbar({ isStatic = false }: { isStatic?: boolean }) {
                 <Clock className="w-4 h-4 text-turmeric shrink-0" />
                 <span className="text-xs">Daily: 10:00 AM – 11:30 PM (Kitchen 10:15 PM)</span>
               </div>
-              <div className="flex items-center gap-3 text-sand/80">
-                <Phone className="w-4 h-4 text-sea-glass shrink-0" />
-                <a
-                  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
-                  className="text-xs hover:text-sand"
-                >
-                  {siteConfig.contact.phone}
-                </a>
-              </div>
+
 
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 <Button
