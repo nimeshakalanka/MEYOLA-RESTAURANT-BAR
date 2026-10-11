@@ -24,24 +24,24 @@ export default function HomePage() {
         <div className="container-meyola max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             
-            {/* ── LEFT SIDE: Little Cards with Glass Effect ── */}
-            <div className="lg:col-span-5 grid grid-cols-2 gap-3.5 sm:gap-4 order-2 lg:order-1">
+            {/* ── LEFT SIDE: Little Cards with Glass Effect & Hover Expansion ── */}
+            <div className="lg:col-span-5 grid grid-cols-2 gap-3.5 sm:gap-4 order-2 lg:order-1 items-start">
               {/* Card 1: Claypot Curry Harvest */}
-              <div className="group relative rounded-2xl bg-white/[0.07] backdrop-blur-xl border border-white/20 p-2.5 sm:p-3 shadow-[0_20px_40px_rgba(0,0,0,0.45)] hover:border-coral-ember/50 hover:bg-white/[0.12] transition-all duration-300">
-                <div className="relative h-56 sm:h-64 w-full rounded-xl overflow-hidden bg-deep-palm">
+              <div className="group relative rounded-2xl bg-white/[0.07] backdrop-blur-xl border border-white/20 p-2 sm:p-2.5 shadow-[0_15px_30px_rgba(0,0,0,0.4)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.65)] hover:border-coral-ember/60 hover:bg-white/[0.12] transition-all duration-500 ease-out hover:-translate-y-1.5 cursor-pointer">
+                <div className="relative h-40 sm:h-44 group-hover:h-56 sm:group-hover:h-64 w-full rounded-xl overflow-hidden bg-deep-palm transition-[height] duration-500 ease-out">
                   <Image
                     src={brandImages.dishes.riceCurry.src}
                     alt={brandImages.dishes.riceCurry.alt}
                     fill
                     sizes="(max-width: 640px) 50vw, 260px"
-                    className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  <span className="absolute top-2 left-2 px-2 py-0.5 rounded-full text-[0.62rem] font-sans uppercase font-bold tracking-wider bg-midnight-lagoon/85 backdrop-blur-md text-coral-ember border border-coral-ember/30">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                  <span className="absolute top-2 left-2 px-2 py-0.5 rounded-full text-[0.62rem] font-sans uppercase font-bold tracking-wider bg-midnight-lagoon/85 backdrop-blur-md text-coral-ember border border-coral-ember/30 transition-transform duration-300 group-hover:scale-105">
                     Claypot Harvest
                   </span>
                   <div className="absolute bottom-2.5 left-2.5 right-2.5 text-white">
-                    <h4 className="font-display text-sm sm:text-base font-medium text-sand leading-snug drop-shadow">
+                    <h4 className="font-display text-sm sm:text-base font-medium text-sand leading-snug drop-shadow transition-colors duration-300 group-hover:text-coral-ember">
                       Rice &amp; Curry
                     </h4>
                     <p className="text-[0.68rem] font-sans text-sand/80 line-clamp-1 mt-0.5">
@@ -52,21 +52,21 @@ export default function HomePage() {
               </div>
 
               {/* Card 2: Sunset Arrack Cocktail */}
-              <div className="group relative rounded-2xl bg-white/[0.07] backdrop-blur-xl border border-white/20 p-2.5 sm:p-3 shadow-[0_20px_40px_rgba(0,0,0,0.45)] hover:border-turmeric/50 hover:bg-white/[0.12] transition-all duration-300">
-                <div className="relative h-56 sm:h-64 w-full rounded-xl overflow-hidden bg-deep-palm">
+              <div className="group relative rounded-2xl bg-white/[0.07] backdrop-blur-xl border border-white/20 p-2 sm:p-2.5 shadow-[0_15px_30px_rgba(0,0,0,0.4)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.65)] hover:border-turmeric/60 hover:bg-white/[0.12] transition-all duration-500 ease-out hover:-translate-y-1.5 cursor-pointer">
+                <div className="relative h-40 sm:h-44 group-hover:h-56 sm:group-hover:h-64 w-full rounded-xl overflow-hidden bg-deep-palm transition-[height] duration-500 ease-out">
                   <Image
                     src={brandImages.bar.arrackSour.src}
                     alt={brandImages.bar.arrackSour.alt}
                     fill
                     sizes="(max-width: 640px) 50vw, 260px"
-                    className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  <span className="absolute top-2 left-2 px-2 py-0.5 rounded-full text-[0.62rem] font-sans uppercase font-bold tracking-wider bg-midnight-lagoon/85 backdrop-blur-md text-turmeric border border-turmeric/30">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                  <span className="absolute top-2 left-2 px-2 py-0.5 rounded-full text-[0.62rem] font-sans uppercase font-bold tracking-wider bg-midnight-lagoon/85 backdrop-blur-md text-turmeric border border-turmeric/30 transition-transform duration-300 group-hover:scale-105">
                     Golden Hour
                   </span>
                   <div className="absolute bottom-2.5 left-2.5 right-2.5 text-white">
-                    <h4 className="font-display text-sm sm:text-base font-medium text-sand leading-snug drop-shadow">
+                    <h4 className="font-display text-sm sm:text-base font-medium text-sand leading-snug drop-shadow transition-colors duration-300 group-hover:text-turmeric">
                       Arrack Sours
                     </h4>
                     <p className="text-[0.68rem] font-sans text-sand/80 line-clamp-1 mt-0.5">
