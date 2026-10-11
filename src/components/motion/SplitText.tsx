@@ -18,7 +18,7 @@ export interface SplitTextProps {
 export function SplitText({
   text,
   type = "words",
-  tag: Tag = "h1",
+  tag: Tag = "span",
   delay = 100,
   staggerDelay = 45,
   duration = 900,

@@ -81,6 +81,7 @@ export function Hero() {
         {/* Giant Split-Text Headline (Anime.js v4) */}
         <h1 className="text-fluid-hero font-display font-medium text-sand tracking-tight text-balance max-w-4xl mx-auto mb-6">
           <SplitText
+            tag="span"
             text="Where the island meets the evening."
             type="words"
             delay={200}
