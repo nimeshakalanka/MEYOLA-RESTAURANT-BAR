@@ -74,16 +74,7 @@ export function Footer() {
               Explore
             </span>
             <ul className="flex flex-col gap-2.5 text-xs sm:text-sm font-sans text-sand/75">
-              <li>
-                <Link href="/#story" className="hover:text-sea-glass transition-colors">
-                  Our Story &amp; Ethos
-                </Link>
-              </li>
-              <li>
-                <Link href="/#signatures" className="hover:text-sea-glass transition-colors">
-                  Signature Dishes
-                </Link>
-              </li>
+
               <li>
                 <Link href="/menu" className="hover:text-sea-glass transition-colors">
                   Complete Food &amp; Bar Menu

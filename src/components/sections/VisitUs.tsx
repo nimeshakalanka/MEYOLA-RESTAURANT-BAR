@@ -26,7 +26,6 @@ interface FormData {
   date: string;
   time: string;
   guests: string;
-  seatingArea: string;
   notes: string;
 }
 
@@ -38,7 +37,6 @@ export function VisitUs() {
     date: "",
     time: "18:00",
     guests: "2",
-    seatingArea: "courtyard",
     notes: "",
   });
 
@@ -81,7 +79,6 @@ export function VisitUs() {
       date: "",
       time: "18:00",
       guests: "2",
-      seatingArea: "courtyard",
       notes: "",
     });
   };
@@ -269,7 +266,6 @@ export function VisitUs() {
                         Reservation Summary
                       </span>
                       <p>• Contact: {formData.phone}</p>
-                      <p>• Seating Preference: {formData.seatingArea === "courtyard" ? "Open-Air Courtyard" : "Palm Garden Terrace"}</p>
                       {formData.notes && <p>• Special Note: {formData.notes}</p>}
                     </div>
 
@@ -423,36 +419,7 @@ export function VisitUs() {
                       </div>
                     </div>
 
-                    {/* Seating preference */}
-                    <div>
-                      <label className="block text-xs font-sans font-bold uppercase tracking-wider text-midnight-lagoon mb-1.5">
-                        Seating Preference
-                      </label>
-                      <div className="grid grid-cols-2 gap-3">
-                        <button
-                          type="button"
-                          onClick={() => setFormData({ ...formData, seatingArea: "courtyard" })}
-                          className={`py-2.5 px-3 rounded-xl text-xs font-sans font-semibold border transition-all text-center ${
-                            formData.seatingArea === "courtyard"
-                              ? "bg-midnight-lagoon text-sand border-midnight-lagoon shadow"
-                              : "bg-sand/30 text-midnight-lagoon/80 border-midnight-lagoon/20 hover:border-midnight-lagoon/40"
-                          }`}
-                        >
-                          Open-Air Courtyard
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => setFormData({ ...formData, seatingArea: "terrace" })}
-                          className={`py-2.5 px-3 rounded-xl text-xs font-sans font-semibold border transition-all text-center ${
-                            formData.seatingArea === "terrace"
-                              ? "bg-midnight-lagoon text-sand border-midnight-lagoon shadow"
-                              : "bg-sand/30 text-midnight-lagoon/80 border-midnight-lagoon/20 hover:border-midnight-lagoon/40"
-                          }`}
-                        >
-                          Garden Palm Terrace
-                        </button>
-                      </div>
-                    </div>
+
 
                     {/* Special Notes / Dietary Requests */}
                     <div>

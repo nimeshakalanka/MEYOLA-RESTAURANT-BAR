@@ -8,8 +8,6 @@ import { Button } from "./Button";
 import { siteConfig } from "@/lib/site";
 
 const navLinks = [
-  { name: "Story", href: "/#story" },
-  { name: "Signatures", href: "/#signatures" },
   { name: "Menu", href: "/menu" },
   { name: "The Bar", href: "/#bar" },
   { name: "Gallery", href: "/#gallery" },

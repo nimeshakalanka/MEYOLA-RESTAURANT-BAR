@@ -3,8 +3,6 @@ import { Navbar } from "@/components/ui/Navbar";
 import { Preloader } from "@/components/ui/Preloader";
 import { Hero } from "@/components/sections/Hero";
 import { Marquee } from "@/components/ui/Marquee";
-import { Story } from "@/components/sections/Story";
-import { SignatureDishes } from "@/components/sections/SignatureDishes";
 import { MenuPreview } from "@/components/sections/MenuPreview";
 import { TheBar } from "@/components/sections/TheBar";
 import { Gallery } from "@/components/sections/Gallery";
@@ -41,11 +39,7 @@ export default function HomePage() {
         />
       </div>
 
-      {/* 5. Our Story Section (Dark Midnight Lagoon) */}
-      <Story />
 
-      {/* 6. Signature Dishes Section (Warm Sand with 3D Tilt Cards) */}
-      <SignatureDishes />
 
       {/* 7. Menu Ledger & Preview Section (Deep Palm Dark) */}
       <MenuPreview />
