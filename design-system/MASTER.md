@@ -81,3 +81,6 @@ To create visual interest and prevent monotonous dark blocks:
 - [x] Responsive layout verified at 375px, 768px, 1280px, 1920px.
 - [x] Zero horizontal scroll (`overflow-x: hidden`).
 - [x] No TODO stubs or missing implementation.
+
+
+.
