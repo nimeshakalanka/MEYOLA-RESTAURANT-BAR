@@ -9,8 +9,7 @@ import { siteConfig } from "@/lib/site";
 
 const navLinks = [
   { name: "Menu", href: "/menu" },
-  { name: "The Bar", href: "/#bar" },
-  { name: "Gallery", href: "/#gallery" },
+  { name: "Atmosphere", href: "/#gallery" },
   { name: "Visit & Hours", href: "/#visit" },
 ];
 

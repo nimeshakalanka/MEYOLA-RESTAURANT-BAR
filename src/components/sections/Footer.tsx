@@ -81,18 +81,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#bar" className="hover:text-sea-glass transition-colors">
-                  The Sunset Cocktail Bar
-                </Link>
-              </li>
-              <li>
                 <Link href="/#gallery" className="hover:text-sea-glass transition-colors">
-                  Atmosphere Gallery
+                  Atmosphere &amp; Moments
                 </Link>
               </li>
               <li>
                 <Link href="/#visit" className="hover:text-sea-glass transition-colors">
-                  Table Reservations
+                  Table Reservations &amp; Hours
                 </Link>
               </li>
             </ul>
