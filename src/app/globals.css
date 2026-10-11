@@ -1,0 +1,312 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight-lagoon: #0B1F1E;
+  --color-deep-palm: #123B34;
+  --color-sand: #F3E9D7;
+  --color-coral-ember: #E8603C;
+  --color-turmeric: #E9B44C;
+  --color-sea-glass: #7FC8B8;
+
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   MEYOLA RESTAURANT & BAR — TROPICAL DUSK DESIGN SYSTEM
+   Weligama Bay, Southern Sri Lanka
+   ═══════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --midnight-lagoon: #0B1F1E;
+  --deep-palm: #123B34;
+  --sand: #F3E9D7;
+  --coral-ember: #E8603C;
+  --turmeric: #E9B44C;
+  --sea-glass: #7FC8B8;
+
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Surfaces & Text */
+  --bg-dark: #0B1F1E;
+  --bg-dark-elevated: #123B34;
+  --bg-dark-card: rgba(18, 59, 52, 0.45);
+  --bg-sand: #F3E9D7;
+  --bg-sand-card: rgba(255, 255, 255, 0.7);
+
+  --text-dark-primary: #F3E9D7;
+  --text-dark-muted: rgba(243, 233, 215, 0.75);
+  --text-dark-dim: rgba(243, 233, 215, 0.5);
+
+  --text-sand-primary: #0B1F1E;
+  --text-sand-muted: rgba(11, 31, 30, 0.78);
+  --text-sand-dim: rgba(11, 31, 30, 0.55);
+
+  --border-dark: rgba(127, 200, 184, 0.18);
+  --border-sand: rgba(11, 31, 30, 0.14);
+}
+
+/* Reset & Base HTML */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--midnight-lagoon);
+  color: var(--sand);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--midnight-lagoon);
+  color: var(--sand);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+::selection {
+  background-color: var(--coral-ember);
+  color: #FFFFFF;
+}
+
+/* ── Typography Scale (Fluid via clamp) ── */
+.font-display {
+  font-family: var(--font-serif);
+}
+
+.font-body {
+  font-family: var(--font-sans);
+}
+
+.text-fluid-hero {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 6.2vw, 5.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.text-fluid-h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.text-fluid-h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2.2vw, 1.85rem);
+  line-height: 1.25;
+}
+
+.text-fluid-body {
+  font-family: var(--font-sans);
+  font-size: clamp(0.95rem, 1.1vw, 1.125rem);
+  line-height: 1.7;
+}
+
+/* ── Section Rhythm (Alternating Dark / Sand) ── */
+.section-dark {
+  background-color: var(--midnight-lagoon);
+  color: var(--sand);
+  position: relative;
+}
+
+.section-deep-palm {
+  background-color: var(--deep-palm);
+  color: var(--sand);
+  position: relative;
+}
+
+.section-sand {
+  background-color: var(--sand);
+  color: var(--midnight-lagoon);
+  position: relative;
+}
+
+/* ── Container ── */
+.container-meyola {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 3rem);
+  padding-right: clamp(1.25rem, 4vw, 3rem);
+}
+
+/* ── Tropical Dusk Buttons ── */
+.btn-coral {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background-color: var(--coral-ember);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.95rem 2.25rem;
+  border-radius: 9999px;
+  border: 1px solid var(--coral-ember);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(232, 96, 60, 0.35);
+}
+
+.btn-coral:hover {
+  background-color: #f1704d;
+  border-color: #f1704d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(232, 96, 60, 0.55);
+}
+
+.btn-coral:active {
+  transform: translateY(0);
+}
+
+.btn-sand-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background-color: transparent;
+  color: var(--sand);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.95rem 2.25rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(243, 233, 215, 0.3);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-sand-outline:hover {
+  border-color: var(--sea-glass);
+  color: var(--sea-glass);
+  background-color: rgba(127, 200, 184, 0.08);
+  transform: translateY(-2px);
+}
+
+.btn-dark-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background-color: transparent;
+  color: var(--midnight-lagoon);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.95rem 2.25rem;
+  border-radius: 9999px;
+  border: 1.5px solid var(--midnight-lagoon);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-dark-outline:hover {
+  background-color: var(--midnight-lagoon);
+  color: var(--sand);
+  transform: translateY(-2px);
+}
+
+/* ── Badges & Overlines ── */
+.badge-turmeric {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--turmeric);
+  background: rgba(233, 180, 76, 0.12);
+  border: 1px solid rgba(233, 180, 76, 0.3);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+}
+
+.overline-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Film Grain Overlay (CSS SVG Data-URI) ── */
+.film-grain {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.038;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* ── Sunset Radial Glows ── */
+.sunset-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(90px);
+}
+
+.glow-coral {
+  background: radial-gradient(circle, rgba(232, 96, 60, 0.22) 0%, transparent 70%);
+}
+
+.glow-turmeric {
+  background: radial-gradient(circle, rgba(233, 180, 76, 0.18) 0%, transparent 70%);
+}
+
+.glow-sea-glass {
+  background: radial-gradient(circle, rgba(127, 200, 184, 0.16) 0%, transparent 70%);
+}
+
+/* ── Glassmorphism Surfaces ── */
+.glass-dark {
+  background: rgba(18, 59, 52, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(127, 200, 184, 0.18);
+}
+
+.glass-sand {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(11, 31, 30, 0.1);
+}
+
+/* ── Hide scrollbar utility ── */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ── Focus states for WCAG AA ── */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--coral-ember);
+  outline-offset: 3px;
+}
